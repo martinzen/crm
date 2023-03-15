@@ -1,6 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import connectToDatabase from '@/lib/db'
-import User from '@/models/User';
+import Quote from '@/models/User';
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 
@@ -15,13 +15,15 @@ export default async function handler(
         
         break;
     case "PUT":
-        console.log("Creating user")
-        const {name,email}=req.body
-        const user = await User.findOneAndUpdate({email},{name,email},{new:true,upsert:true,setDefaultsOnInsert:true}) 
-        console.log("USER ", user)
+        console.log("Quote Entered")
+        const {firstName,lastName,mobile,email,installationAddress,NMI,meterNumber,electricityRetailer,electricityDistribution,numberOfPanelsSold,roofType,paymentOptions,story,phase,salesPersonName,numberOfTiltedPanels,note,postcode}=req.body
+          /* */
+        const quote = await Quote.findOneAndUpdate({email},{firstName,lastName,mobile,email,installationAddress,NMI,meterNumber,electricityRetailer,electricityDistribution,numberOfPanelsSold,roofType,paymentOptions,story,phase,salesPersonName,numberOfTiltedPanels,note,postcode},{new:true,upsert:true,setDefaultsOnInsert:true}) 
+        /**/
+        console.log("QUOTE ", quote)
         break;
       
-  
+
     default:
         break;
   }
