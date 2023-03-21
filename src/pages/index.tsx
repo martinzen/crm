@@ -1,6 +1,21 @@
+import Head from 'next/head'
+import Image from 'next/image'
+import { Inter } from 'next/font/google'
+
 import React from 'react';
- import { useFormik } from 'formik';
- 
+import { useFormik } from 'formik';
+import {
+  Formik,
+  Form,
+  Field,
+  ErrorMessage,
+  FieldArray,
+  FastField
+} from 'formik'
+import Quote from '@/models/User';
+
+
+
  const SignupForm = () => {
    // Note that we have to initialize ALL of fields with values. These
    // could come from props, but since we don’t want to prefill this form,
@@ -33,7 +48,10 @@ import React from 'react';
      },
    });
    return (
-
+    <div className="formContainer">
+        <div className="leftSide">
+ <h1>Solar Arena</h1>
+ <div className="formContentContainer">
      <form onSubmit={formik.handleSubmit}>
       <div className="form-row">
       <div className="form-group col-md-6">
@@ -92,7 +110,6 @@ import React from 'react';
          value={formik.values.postcode}
        />
  </div>
- 
  <div className="form-group col-md-6">
   <label htmlFor="NMI">NMI</label>
        <input
@@ -111,7 +128,7 @@ import React from 'react';
          onChange={formik.handleChange}
          value={formik.values.meterNumber}
        />
- </div>
+</div>
  <div className="form-group col-md-6">
  <label htmlFor="electricityRetailer">Electricity Retailer:</label>
        <input
@@ -130,7 +147,7 @@ import React from 'react';
          onChange={formik.handleChange}
          value={formik.values.electricityDistribution}
        />
-       </div>
+</div>
        <div className="form-group col-md-6">
 <label htmlFor="Story">Story:</label>
        <input
@@ -209,6 +226,12 @@ import React from 'react';
        <button type="submit">Submit</button>
        </div>
      </form>
+     </div>
+     </div>
+     </div>
+     
    );
+   
  };
+ 
 export default SignupForm;

@@ -1,0 +1,30 @@
+body {
+    background: linear-gradient( rgb(217, 226, 161), transparent), linear-gradient( -45deg, rgb(235, 161, 34), transparent), linear-gradient( 45deg, rgb(233, 198, 28), transparent);
+    background-blend-mode: multiply;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.formContainer {
+    position: relative;
+    margin: 8% auto;
+    width: 50%;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.6);
+    background: white;
+    padding: 2px 3px 5px 15px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.formContentContainer {
+    margin-top: 25px;
+}
+
+label {
+    display: block;
+}
+
+button {
+    margin: 15px 5px 8px 3px;
+    padding: 2px 5px;
+}
