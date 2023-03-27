@@ -1,7 +1,7 @@
 import mongoose, {Document, Model, Schema, ObjectId} from 'mongoose';
 
 
-export interface Quote extends Document{
+export interface quote extends Document{
     
     firstName: string;
     lastName: string;
@@ -44,6 +44,6 @@ const userSchema: Schema = new Schema ({
   
 })
 
-const Quote: Model<Quote>= mongoose.models.User || mongoose.model<Quote>('Quote', userSchema);
+const Quote: Model<quote>= mongoose.models.User || mongoose.model<quote>('Quote', userSchema);
 
 export default Quote;

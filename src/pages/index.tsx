@@ -12,7 +12,7 @@ import {
   FieldArray,
   FastField
 } from 'formik'
-import Quote from '@/models/User';
+import Quote from '@/pages/api/quote';
 
 
 
@@ -153,7 +153,7 @@ import Quote from '@/models/User';
        <input
          id="Story"
          name="Story"
-         type="text"
+         type="radio"
          onChange={formik.handleChange}
          value={formik.values.Story}
        />
@@ -179,7 +179,7 @@ import Quote from '@/models/User';
        <input
          id="Phase"
          name="Phase"
-         type="text"
+         type="radio"
          onChange={formik.handleChange}
          value={formik.values.Phase}
        />
@@ -198,7 +198,7 @@ import Quote from '@/models/User';
        <input
          id="salesPersonName"
          name="salesPersonName"
-         type="text"
+         type="radio"
          onChange={formik.handleChange}
          value={formik.values.salesPersonName}
        />
@@ -217,7 +217,7 @@ import Quote from '@/models/User';
        <input
          id="paymentOptions"
          name="paymentOptions"
-         type="text"
+         type="radio"
          onChange={formik.handleChange}
          value={formik.values.paymentOptions}
        />
